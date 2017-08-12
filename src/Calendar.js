@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import DayNames from './DayNames.js'
 import Week from './Week.js'
 import moment from 'moment';
+import './Calendar.css'
 export default class Calendar extends Component {
   constructor(props) {
     super(props);
     this.state = {month: moment().startOf('month')};
   }
-
   renderWeeks() {
     var weeks = [],
       done = false,
