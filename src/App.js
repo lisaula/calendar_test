@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Calendar from './Calendar.js'
 class App extends Component {
   constructor(props){
     super(props);
@@ -44,9 +44,7 @@ class App extends Component {
             <input className='input' type='text' className='Days' placeholder='30' onChange={this.handleInputChange}/>
             <button onClick={this.handleButton}>Go</button>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Calendar/>
       </div>
     );
   }
