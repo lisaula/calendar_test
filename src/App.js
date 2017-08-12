@@ -3,6 +3,37 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      Country:'',
+      StartDate: '',
+      Days: '',
+      Calendars: ''
+    };
+
+    this.handleButton = this.handleButton.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+
+  handleButton(){
+    console.log("Button pressed");
+  }
+  handleInputChange(event){
+    console.log("entro");
+    switch (event.target.className){
+      case 'Country':
+        this.setState({Country: event.target.value});
+      break;
+      case 'StartDate':
+        this.setState({StartDate: event.target.value});
+      break;
+      case 'Days':
+        this.setState({Days: event.target.value});
+      break;
+    }
+  }
+
   render() {
     return (
       <div className="App">
