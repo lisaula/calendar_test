@@ -6,7 +6,7 @@ import './Calendar.css'
 export default class Calendar extends Component {
   constructor(props) {
     super(props);
-    this.state = {month: moment().startOf('month')};
+    this.state = {month: this.props.month};
   }
   renderWeeks() {
     var weeks = [],
